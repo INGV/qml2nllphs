@@ -23,7 +23,6 @@ RUN python3 -m pip install obspy
 
 # Copy files
 COPY qml2nllphs.py /opt
-COPY ws_agency_route.conf /opt
 COPY entrypoint.sh /opt
 
 #
