@@ -14,6 +14,7 @@ RUN apt-get clean \
         build-essential \
         systemd \
         wget \
+        zip \
         vim
 
 # Adding python3 libraries
