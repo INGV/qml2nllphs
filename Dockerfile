@@ -13,14 +13,15 @@ RUN apt-get clean \
         gcc \
         build-essential \
         systemd \
-        wget
+        wget \
+        vim
 
 # Adding python3 libraries
 RUN python3 -m pip install numpy
 RUN python3 -m pip install obspy
 
 # Copy files
-COPY qml2hypo71.py /opt
+COPY qml2nllphs.py /opt
 COPY ws_agency_route.conf /opt
 COPY entrypoint.sh /opt
 
