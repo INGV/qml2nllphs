@@ -26,9 +26,5 @@ COPY qml2nllphs.py /opt
 COPY entrypoint.sh /opt
 
 #
-RUN echo "export MPLCONFIGDIR=/tmp" >> ~/.bashrc
-RUN echo "alias ll='ls -l' >> ~/.bashrc
-
-#
 WORKDIR /opt
 ENTRYPOINT ["bash", "/opt/entrypoint.sh"]
