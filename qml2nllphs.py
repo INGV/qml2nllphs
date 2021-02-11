@@ -58,9 +58,9 @@ def parseArguments():
 
 try:
     import ConfigParser as cp
-    sys.stderr.write("ConfigParser loaded\n")
+    #sys.stderr.write("ConfigParser loaded\n")
 except ImportError:
-    sys.stderr.write("configparser loaded\n")
+    #sys.stderr.write("configparser loaded\n")
     import configparser as cp
 
 # Build a dictionary from config file section
@@ -302,11 +302,26 @@ def qml2location(o,la,la_e,lo,lo_e,de,de_e,q,m_e,r_e):
            str("{0:0>2}".format(int(OT.hour)))+" "+\
            str("{0:0>2}".format(int(OT.minute)))+" "+\
            str("{0:.4f}".format(float(OT.second)+float(OT.microsecond)/1000000.)).zfill(7)
-    gap=q['azimuthal_gap']
-    rms=q['standard_error']
-    mindist=float(q['minimum_distance'])*100.0
-    maxdist=float(q['maximum_distance'])*100.0
-    nphs=q['used_phase_count']
+    try:
+       gap=q['azimuthal_gap']
+    except:
+       gap=False
+    try:
+       rms=q['standard_error']
+    except:
+       rms=False
+    try:
+       mindist=float(q['minimum_distance'])*100.0
+    except:
+       mindist=False
+    try:
+       maxdist=float(q['maximum_distance'])*100.0
+    except:
+       maxdist=False
+    try:
+       nphs=q['used_phase_count']
+    except:
+       nphs=False
     r_e=r_e.replace(' ','_')
     wri_str="# INGVWS  OT " + str(o_time) + " Lat " + str(la) + " Lat_Err " + str(la_e) + " Long " + str(lo) + " Lon_Err " + str(lo_e) + " Depth " + str(de) + " Dep_Err " + str(de_e) + \
             "  QUALITY  GAP " + str(gap) + " RMS " + str(rms) + " NPHS " + str(nphs) + " MinDist " + str(mindist) + " MaxDist " + str(maxdist) + " Magnitude " + str(m_e) + " Region " + str(r_e)
@@ -415,6 +430,7 @@ for event in cat:
     for origin in evdict['origins']:
         or_id=str(origin['resource_id']).split('=')[-1]
         if origin['creation_info']['version'] == str(orig_ver) or (orig_ver == 'preferred' and or_id == pref_or_id):
+            phases_to_write=[]
             #for k, v in origin.items():
             #    print(k, v)
             found=True
@@ -439,9 +455,6 @@ for event in cat:
                 ode_u=False
             qual=origin['quality']
 
-            # Writing a first additional commented line to keep the event location of the extracted version
-            print(qml2location(OT,ola,ola_u,olo,olo_u,ode,ode_u,qual,pref_mag,region))
-            print(header)
             for arrival in origin['arrivals']:
                 pickid_str=arrival['pick_id']
                 pickid_num=str(arrival['pick_id']).split('=')[-1]
@@ -473,8 +486,15 @@ for event in cat:
                         Instrument=Network_Code # Instrument is here 
                         phase=Station_Name + " " + Instrument + " " + Component + " " + Phase_onset + " " + Phase_descriptor + " " + First_motion + " " + Date + " " + HhMm + " " + Seco + " " + Err_type + " " + Err + " " + Err_mag + " " + Coda_dur + " " + Amplitude
                         # Writing the phases line here in NLL format
-                        print(phase)
-            print("")
+                        phases_to_write.append(phase)
+            
+            if len(phases_to_write) != 0:
+               # Writing a first additional commented line to keep the event location of the extracted version
+               print(qml2location(OT,ola,ola_u,olo,olo_u,ode,ode_u,qual,pref_mag,region))
+               print(header)
+               for item in phases_to_write:
+                   print(item)
+               print("")
 if not found:
    sys.stderr.write("Chosen version doesnt match any origin id\n")
    sys.exit(202) # Il codice 202 e' stato scelto per identificare il caso in cui tutto sia corretto ma non ci sia alcuna versione come quella scelta
