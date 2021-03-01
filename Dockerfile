@@ -14,6 +14,7 @@ RUN apt-get clean \
         build-essential \
         systemd \
         wget \
+        zip \
         vim
 
 # Adding python3 libraries
@@ -22,7 +23,6 @@ RUN python3 -m pip install obspy
 
 # Copy files
 COPY qml2nllphs.py /opt
-COPY ws_agency_route.conf /opt
 COPY entrypoint.sh /opt
 
 #
