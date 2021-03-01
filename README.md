@@ -1,11 +1,11 @@
-[![License](https://img.shields.io/github/license/INGV/qml2nllphs.svg)](https://github.com/INGV/qml2nllphs/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/INGV/qml2nllphs.svg)](https://github.com/INGV/qml2nllphs/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/INGV/qml2nllphs.svg)](https://github.com/INGV/qml2nllphs/issues)
 
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ingv/qml2nllphs)
 ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/ingv/qml2nllphs?sort=semver)
 ![Docker Pulls](https://img.shields.io/docker/pulls/ingv/qml2nllphs)
 
-# qml2nllphs [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/INGV/qml2nllphs/master/publiccode.yml)](https://github.com/INGV/qml2nllphs/blob/master/publiccode.yml) [![CircleCI](https://circleci.com/gh/INGV/qml2nllphs/tree/master.svg?style=svg)](https://circleci.com/gh/INGV/qml2nllphs/tree/master)
+# qml2nllphs [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/INGV/qml2nllphs/main/publiccode.yml)](https://github.com/INGV/qml2nllphs/blob/main/publiccode.yml) [![CircleCI](https://circleci.com/gh/INGV/qml2nllphs/tree/main.svg?style=svg)](https://circleci.com/gh/INGV/qml2nllphs/tree/main)
 
 Docker used to . . .
 
