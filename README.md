@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/github/license/INGV/qml2nllphs.svg)](https://github.com/INGV/qml2nllphs/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/INGV/qml2nllphs.svg)](https://github.com/INGV/qml2nllphs/issues)
 
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ingv/qml2nllphs)
+![Docker Automated build](https://img.shields.io/docker/automated/ingv/qml2nllphs)
 ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/ingv/qml2nllphs?sort=semver)
 ![Docker Pulls](https://img.shields.io/docker/pulls/ingv/qml2nllphs)
 
