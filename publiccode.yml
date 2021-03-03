@@ -53,6 +53,6 @@ description:
  
       The NonLinLoc (Non-Linear Location) package is a set of programs for velocity model construction, travel-time calculation and probabilistic, non-linear, global-search earthquake location in 3D structures, and for visualisation of 3D volume data and location results. Many of the programs operate with a 3D Grid structure which defines a specific, gridded, rectangular volume (Non-GLOBAL mode) or spherical section (GLOBAL mode). More info about NonLinLoc: http://alomax.free.fr/nlloc/
 
-    localisedName: 'Seismic Tools'
+    localisedName: 'QuakeML to NonLinLoc PHS'
     features:
-      - Seismic tools 
+      - Converter from QuakeML to NonLinLoc PHS
