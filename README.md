@@ -10,7 +10,38 @@
 
 # qml2nllphs [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/INGV/qml2nllphs/main/publiccode.yml)](https://github.com/INGV/qml2nllphs/blob/main/publiccode.yml) [![CircleCI](https://circleci.com/gh/INGV/qml2nllphs/tree/main.svg?style=svg)](https://circleci.com/gh/INGV/qml2nllphs/tree/main)
 
-Docker used to . . .
+The qml2nllphs.py code is included into the present docker.
+
+The docker is used to parse a full QuakeML (xml) file containing information on hypocenter and related arrival times picks, and convert all to ![NonLinLoc standard phase input file](http://alomax.free.fr/nlloc/soft2.37/formats.html#_phase_nlloc_).
+
+The following line is taken from the example output:
+
+```
+#Station_name Instrument Component P_phase_onset Phase_descriptor First_motion Date Hour_minute Seconds Err_type Err Err_mag Coda_duration Amplitude Period
+MTRZ IV HNZ ? Sn ? 20210211 0619 41.3500 QUAL 4 -1.00E+00 -1.00E+00 -1.00E+00
+```
+Note:
+* In the present version no information on Coda\_duration Amplitude Period is included in the output.
+* the Err\_type is "QUAL" so the Err\_mag is expressed as discrete Hypoinverse-like weight
+* One reading one line
+* To include network information we used Instrument field as "network" record and "Component" field for Instrument+Component, that is fully compatible with NLL
+
+The source code has a specific usage to which the docker has its simplified interface, so the user does not need to know it.
+
+Anyway, only for information completeness here it is:
+
+```
+usage: qml2nllphs.py [-h] [--qmlin QMLIN] [--eventid EVENTID] [--version VERSION] [--conf CONF] [--agency AGENCY]
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --qmlin QMLIN      Full path to qml event file
+  --eventid EVENTID  INGV event id
+  --version VERSION  Agency coding origin version type (default: preferred) preferred,all, or an integer for known version numbers
+  --conf CONF        needed with --eventid agency webservices routes list type (default: ./ws_agency_route.conf)
+  --agency AGENCY    needed with --eventid agency to query for (see routes list in .conf file) type (default: ingv)
+
+```
 
 ## Quickstart
 ### Docker image
