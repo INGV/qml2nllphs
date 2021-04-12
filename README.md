@@ -12,7 +12,7 @@
 
 The qml2nllphs.py code is included into the present docker.
 
-The docker is used to parse a full QuakeML (xml) file containing information on hypocenter and related arrival times picks, and convert all to ![NonLinLoc standard phase input file](http://alomax.free.fr/nlloc/soft2.37/formats.html#_phase_nlloc_).
+The docker is used to parse a full QuakeML (xml) file containing information on hypocenter and related arrival times picks, and convert all to [NonLinLoc standard phase input file](http://alomax.free.fr/nlloc/soft2.37/formats.html#_phase_nlloc_).
 
 The following line is taken from the example output:
 
