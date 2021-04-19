@@ -415,7 +415,7 @@ DEGREE_TO_KM=111.1949 # Defined after eventdb setup (valentino.lauciani@ingv.it)
 
 
 ## Building Header for commented line descibing the content
-header="#Station_name Instrument Component P_phase_onset Phase_descriptor First_motion Date Hour_minute Seconds Err_type Err Err_mag Coda_duration Amplitude"
+header="#Station_name Instrument Component P_phase_onset Phase_descriptor First_motion Date Hour_minute Seconds Err_type Err Err_mag Coda_duration Amplitude Period"
 found=False
 for event in cat:
     evdict=dict(event)
