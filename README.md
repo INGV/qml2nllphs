@@ -59,7 +59,12 @@ $ docker pull ingv/qml2nllphs
 ```
 
 # Contribute
-Please, feel free to contribute.
+Thanks to your contributions!
+
+Here is a list of users who already contributed to this repository:
+<a href="https://github.com/ingv/qml2nllphs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ingv/qml2nllphs" />
+</a>
 
 # Author
 (c) 2021 Raffaele Distefano raffaele.distefano[at]ingv.it
