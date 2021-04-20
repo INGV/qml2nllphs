@@ -89,7 +89,10 @@ Get last Docker image from DockerHub repository:
 $ docker pull ingv/qml2nllphs
 ```
 
-# Contribute
+## Example
+![2021-qml2nllphs](https://user-images.githubusercontent.com/16477095/115374480-2d946680-a1cd-11eb-90f3-6a894615eece.gif)
+
+## Contribute
 Thanks to your contributions!
 
 Here is a list of users who already contributed to this repository:
@@ -97,7 +100,7 @@ Here is a list of users who already contributed to this repository:
   <img src="https://contrib.rocks/image?repo=ingv/qml2nllphs" />
 </a>
 
-# Author
+## Author
 (c) 2021 Raffaele Distefano raffaele.distefano[at]ingv.it
 
 (c) 2021 Valentino Lauciani valentino.lauciani[at]ingv.it
