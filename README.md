@@ -8,7 +8,7 @@
 ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/ingv/qml2nllphs?sort=semver)
 ![Docker Pulls](https://img.shields.io/docker/pulls/ingv/qml2nllphs)
 
-# qml2nllphs [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/INGV/qml2nllphs/main/publiccode.yml)](https://github.com/INGV/qml2nllphs/blob/main/publiccode.yml) [![CircleCI](https://circleci.com/gh/INGV/qml2nllphs/tree/main.svg?style=svg)](https://circleci.com/gh/INGV/qml2nllphs/tree/main)
+# qml2nllphs [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/INGV/qml2nllphs/main/publiccode.yml)](https://github.com/INGV/qml2nllphs/blob/main/publiccode.yml) [![CircleCI](https://circleci.com/gh/INGV/qml2nllphs/tree/main.svg?style=svg)](https://circleci.com/gh/INGV/qml2nllphs/tree/main) | [![GitHub](https://img.shields.io/static/v1?label=GitHub&message=Link%20to%20repository&color=blueviolet)](https://github.com/INGV/qml2nllphs/)
 
 The qml2nllphs.py code is included into the present docker.
 
