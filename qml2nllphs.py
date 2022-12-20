@@ -269,7 +269,7 @@ def convert_sispick_quality(q):
         w='3'
     elif qf > 1.0 and qf <= 3.0:
         w='4'
-    elif qf > 10.0:
+    elif qf > 3.0:
         w='8'
     return w
 
