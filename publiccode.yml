@@ -4,11 +4,11 @@
 
 publiccodeYmlVersion: '0.2'
 name: 'INGV - QuakeML to NonLinLoc PHS' 
-releaseDate: '2022-12-29'
+releaseDate: '2023-01-03'
 url: 'https://github.com/INGV/qml2nllphs'
 logo: images/ingv_logo_text_two_lines.png
 landingURL: 'https://github.com/INGV/qml2nllphs'
-softwareVersion: v1.23.0
+softwareVersion: v1.24.0
 developmentStatus: stable
 softwareType: standalone/other
 platforms:
